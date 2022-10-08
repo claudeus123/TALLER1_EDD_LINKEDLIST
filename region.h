@@ -8,12 +8,12 @@ class Region{
 		std::string code;
   		int size;
   	public:
-		Region();
-    		Region(std::string code);
-    		~Region();
-		void setCode(std::string code);
-    		std::string getCode();
-   		int getSize();
-    		void setSize(int size);
+		Region(); //Default constructor
+    		Region(std::string code); // constructor
+    		~Region(); // Destructor
+		void setCode(std::string code); //Set codigo
+    		std::string getCode(); // GET codigo
+   		int getSize(); //GET cantidad de registros
+    		void setSize(int size); //SET cantidad de registros
 };
 #endif
