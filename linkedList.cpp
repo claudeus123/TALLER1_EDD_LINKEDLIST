@@ -6,21 +6,22 @@
 LinkedList::LinkedList(){
   first = nullptr;
 }
-
+//GETS -> Obtiene el primer elemento de la lista
 Node* LinkedList::getFirst(){
 	return first;
 }
-
+//Agrega un nodo en el primer lugar de la lista
 void LinkedList::add(Region* region){
   Node* node = new Node(region);
   node->setNext(first);
   first = node;
 }
+//Le suma uno a la cantidad de registros de la respectiva region
 void LinkedList::sum(Node* node){
 	node->getRegion()->setSize(node->getRegion()->getSize()+1);
 	//std::cout << region.getSize() << std::endl;
 }
-
+// Ordena la lista de menor a mayor en cuanto a codigo de region
 void LinkedList::sort(){
     
         //Node current will point to head  
@@ -52,14 +53,14 @@ void LinkedList::sort(){
           
      
 }
-
+//No implementado
 Node* LinkedList::swap(Node* ptr1, Node* ptr2){
   Node* aux = ptr2->getNext();
   ptr2->setNext(ptr1);
   ptr1->setNext(aux);
   return ptr2;
 }
-
+//Devuelve un nodo en caso de existir 
 Node* LinkedList::exists(std::string code){
   Node* actual = first;
   while(actual!=nullptr){
@@ -69,7 +70,7 @@ Node* LinkedList::exists(std::string code){
   return nullptr;
 
 }
-
+//Destructor de la clase
 LinkedList::~LinkedList(){
 
 }
