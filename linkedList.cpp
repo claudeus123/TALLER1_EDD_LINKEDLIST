@@ -24,7 +24,7 @@ void LinkedList::sum(Node* node){
 // Ordena la lista de menor a mayor en cuanto a codigo de region
 void LinkedList::sort(){
     
-        //Node current will point to head  
+        //Nodo apunta al primero de la lista 
         Node* current = first;
 	Node* index = nullptr;  
 	std::string tempCode = "";
@@ -32,10 +32,10 @@ void LinkedList::sort(){
           
         
        	while(current != nullptr) {  
-                //Node index will point to node next to current  
+                //Node index apunta al siguiente  
                 index = current->getNext();  
                 while(index != nullptr) {  
-                    //If current node's data is greater than index's node data, swap the data between them  
+                    //Ordenamos de menor a mayor  
                     if(std::stoi(current->getRegion()->getCode()) > std::stoi(index->getRegion()->getCode())) {  
                         tempCode = current->getRegion()->getCode();
 		      	tempRegisters = current->getRegion()->getSize();
