@@ -8,11 +8,11 @@ class Node{
   		Region* region;
   
 	public:
-		Node();
-    		Node(Region* region);
-    		~Node();
-    		Region* getRegion();
-    		Node* getNext();
-    		void setNext(Node* next);
+		Node(); //Default constructor
+    		Node(Region* region); // COnstructor
+    		~Node(); // Destructor
+    		Region* getRegion(); //GET de la region del nodo
+    		Node* getNext(); //GET del link
+    		void setNext(Node* next); //SET del link
 };
 #endif
