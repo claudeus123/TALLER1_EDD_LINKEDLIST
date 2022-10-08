@@ -47,11 +47,13 @@ void System::print(){
 void System::deleteList(){
     Node* current = list.getFirst();
     Node* del = nullptr;
-
+	
+    
     //BORRAR REGIONES TAMBIEN 
     while (current != nullptr){
         del = current;
         current = current->getNext();
+	delete del->getRegion();
         delete del;
     }
 }
